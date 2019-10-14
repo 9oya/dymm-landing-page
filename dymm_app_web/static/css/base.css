@@ -63,7 +63,7 @@ div#content {
 /* Footer Block
 -----------------------------------------------------------------------------*/
 div#footer {
-    background-color: ghostwhite;
+    /*background-color: snow;*/
     min-height: 80px;
     font-family: 'Nanum Gothic', sans-serif;
     margin: 0 5px 0 5px;
@@ -92,7 +92,7 @@ section.bx-wrap {
     /*background-color: coral;*/
 }
 
-ul.wrap-img {
+.wrap-img {
     list-style-type: none;
     margin: 0 5% 0 5%;
     overflow: hidden;
@@ -100,12 +100,14 @@ ul.wrap-img {
     text-align: center;
 }
 
-.wrap-img > li {
-    float: left;
-    /*background-color: #28B09A;*/
-    /*text-align: center;*/
-    margin-right: 20px;
-    font-size: 12.5px;
+#bx-home-second {
+    background-color: mediumseagreen;
+    color: white;
+}
+
+#bx-home-third {
+    background-color: honeydew;
+    /*color: white;*/
 }
 
 /* Pagination Element
@@ -147,6 +149,10 @@ ul.wrap-img {
 .subtitle {
     text-align: center;
     font-size: 120%;
+}
+
+.wrap-bt {
+    text-align: center;
 }
 
 .create-new {
