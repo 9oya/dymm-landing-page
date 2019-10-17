@@ -19,7 +19,7 @@ ul#nav-bar > li {
     float: left;
 }
 
-ul#nav-bar > li > a {
+ul#nav-bar > li {
     display: block;
     color: #28B09A;
     text-align: center;
@@ -28,9 +28,18 @@ ul#nav-bar > li > a {
     line-height: 60px;
 }
 
+ul#nav-bar > li > a {
+    /*display: block;*/
+    color: #28B09A;
+    /*text-align: center;*/
+    /*padding: 12px;*/
+    text-decoration: none;
+    /*line-height: 60px;*/
+}
+
 ul#nav-bar > li > a:hover {
     background-color: white;
-    color: gold;
+    color: darkslategray;
 }
 
 /* Loading img
@@ -67,6 +76,7 @@ div#footer {
     min-height: 80px;
     font-family: 'Nanum Gothic', sans-serif;
     margin: 0 5px 0 5px;
+    color: darkslategray;
 }
 
 p#txt-footer {
@@ -100,6 +110,11 @@ section.bx-wrap {
     text-align: center;
 }
 
+#bx-home-first {
+    /*background-color: mediumseagreen;*/
+    color: darkslategray;
+}
+
 #bx-home-second {
     background-color: mediumseagreen;
     color: white;
@@ -107,7 +122,7 @@ section.bx-wrap {
 
 #bx-home-third {
     background-color: honeydew;
-    /*color: white;*/
+    color: darkslategray;
 }
 
 /* Pagination Element

@@ -2,6 +2,7 @@
 <html>
 <head>
     {% block head %}
+        <meta name="google-site-verification" content="ffczSILP-NhMrLuzzZZqN6JCeKw9noCC77PZBzW4xGk" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
@@ -19,10 +20,10 @@
 <body>
 {% include 'nav_bar.html' %}
 <div id="content">{% block content %}{% endblock %}</div>
-<div id="footer">
+<div id="footer" style="display: none;">
     {% block footer %}
         <p id="txt-footer">
-            &copy; Copyright 2019 by eido9oya.
+            Happybiohacking Corp.
         </p>
     {% endblock %}
 </div>
