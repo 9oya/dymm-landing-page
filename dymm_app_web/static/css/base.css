@@ -4,6 +4,50 @@ Start base layout style
 
 /* Navigation Bar
 -----------------------------------------------------------------------------*/
+.nav-left {
+    display: inline;
+    margin: 0 5% 0 5%;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+  Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.nav-right {
+    display: inline;
+    float: right;
+    line-height: 40px;
+    margin: 0 5% 0 5%;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+  Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.nav-left > div, .nav-right > div {
+    display: inline;
+    color: #28B09A;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+    text-decoration: none;
+    /*line-height: 60px;*/
+}
+
+.nav-left > div > a, .nav-right > div > a {
+    color: #28B09A;
+    text-decoration: none;
+}
+
+.nav-right > div > a {
+    color: darkslategray;
+    text-decoration: none;
+}
+
+.nav-left > div > a:hover {
+    color: darkslategray;
+}
+
+.nav-right > div > a:hover {
+    color: #28B09A;
+}
+
 ul#nav-bar {
     list-style-type: none;
     margin: 0 5% 0 5%;
@@ -13,33 +57,6 @@ ul#nav-bar {
     /*font-family: 'Nanum Gothic', sans-serif;*/
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
   Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
-ul#nav-bar > li {
-    float: left;
-}
-
-ul#nav-bar > li {
-    display: block;
-    color: #28B09A;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    line-height: 60px;
-}
-
-ul#nav-bar > li > a {
-    /*display: block;*/
-    color: #28B09A;
-    /*text-align: center;*/
-    /*padding: 12px;*/
-    text-decoration: none;
-    /*line-height: 60px;*/
-}
-
-ul#nav-bar > li > a:hover {
-    background-color: white;
-    color: darkslategray;
 }
 
 /* Loading img
