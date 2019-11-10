@@ -17,10 +17,10 @@ def index_view():
             lang_code = 'en-US'
     if lang_code == 'ko-KR':
         lang_pack = KorPack()
-        lang_txt = '언어'
+        lang_txt = '한글'
     else:
         lang_pack = EngPack()
-        lang_txt = 'Language'
+        lang_txt = 'ENG'
     return render_template('index.html', txt=lang_pack, lang_txt=lang_txt,
                            lang_code=lang_code)
 

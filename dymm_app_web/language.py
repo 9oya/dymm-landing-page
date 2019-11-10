@@ -1,6 +1,6 @@
 class EngPack:
     sect_a_title_l = "Dymm: Life Extension Project"
-    sect_a_title_m = "A Wise Choice for Your Life Style Improvement"
+    sect_a_title_m = "A Wise Choice for Your Lifestyle Improvement"
     sect_a_subtitle = """
     &nbsp;우린 같은 인간임에도 같은 환경에서 생활을 하고 있음에도, 건강한 사람과 그렇지 못한 이로 나뉘어<br/>
             각기 다른 삶을 살게됩니다. 유전자, 환경 그리고 장내미생물에 따라 우리는 모두 다른 인간입니다.<br/>

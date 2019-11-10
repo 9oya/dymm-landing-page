@@ -73,6 +73,10 @@ $(document).ready(function () {
         }, 500);
     };
     _nav.btn.prototype.btnBTapped = function () {
+        $('#overlay').fadeIn(300);
+    };
+    _nav.btn.prototype.popupCloseTapped = function() {
+        $('#overlay').fadeOut(300);
     };
     _nav.btn.prototype.dropASelected = function () {
         if (langStored === 'en-US') {
@@ -103,7 +107,7 @@ $(document).ready(function () {
     });
     _navBar.on(
         "click",
-        "#nav-btn-a, #nav-btn-b, #drop-a, #drop-b",
+        "#nav-btn-a, #nav-btn-b, #drop-a, #drop-b, #popup-close",
         function (e) {
             let _currEle = $(this);
             if (_currEle.is("#nav-btn-a")) {
@@ -114,6 +118,8 @@ $(document).ready(function () {
                 _nav.btn.prototype.dropASelected()
             } else if (_currEle.is("#drop-b")) {
                 _nav.btn.prototype.dropBSelected()
+            } else if (_currEle.is("#popup-close")) {
+                _nav.btn.prototype.popupCloseTapped()
             }
         });
 
