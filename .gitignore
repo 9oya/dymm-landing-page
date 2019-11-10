@@ -14,3 +14,5 @@
 /dist/
 /libs/
 /dymm_app_web/static/owlcarousel/
+/dymm_app_web/templates/test/
+/dymm_app_web/static/css/test.css

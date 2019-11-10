@@ -4,24 +4,29 @@
     <li class="flex-item">
         <br/><br/>
         <div class="title-a-l">
-            딤: 수명연장 프로젝트
+            {{ txt.sect_a_title_l }}
         </div>
         <br/>
         <div class="title-a-m">
-            당신의 삶을 보완하기 위한 현명한 선택
+            {{ txt.sect_a_title_m }}
         </div>
         <br/>
         <div class="subtitle-a">
-            &nbsp;같은 인간임에도 똑 같은 환경에 생활을 하고 있음에도,<br/>
-            건강한 사람과 그렇지 못한 이로 나뉘어 다른 삶을 살게됩니다.<br/>
-            유전자, 환경 그리고 장내미생물에 따라 우린 모두 다른 인간입니다.
+            {{ txt.sect_a_subtitle | safe }}
         </div>
         <br/><br/>
         <div class="wrap-bt">
-            <img class="img-appstore"
-                 src="{{ url_for('static', filename='img/img-app-store-white@2x.png') }}"
-                 width="155px"
-                 height="52px">
+            {% if lang_code == 'ko-KR' %}
+                <img class="img-appstore"
+                     src="{{ url_for('static', filename='img/app-store-white-ko@2x.png') }}"
+                     width="170px"
+                     height="52px">
+            {% else %}
+                <img class="img-appstore"
+                     src="{{ url_for('static', filename='img/app-store-white-en@2x.png') }}"
+                     width="155px"
+                     height="52px">
+            {% endif %}
         </div>
         <br/><br/>
     </li>
@@ -30,7 +35,6 @@
              width="290px"
              height="580px">
     </li>
-    <li class="flex-item"></li>
     <li class="flex-item"></li>
 </ul>
 <br/><br/><br/><br/><br/><br/><br/>

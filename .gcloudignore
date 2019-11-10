@@ -17,3 +17,5 @@
 __pycache__/
 # Ignored by the build system
 /setup.cfg
+/dymm_app_web/templates/test/
+/dymm_app_web/static/css/test.css
