@@ -4,13 +4,15 @@ $(document).ready(function () {
     Import Modules
     =========================================================================*/
     AOS.init();
-    let owl = $('.owl-carousel'),
+    let _f = $.base.method,
+        _u = $.base.url,
+        owl = $('.owl-carousel'),
         lang = window.navigator.language,
         topBtn = $("#btn-top"),
         _navBar = $(".nav-bar"),
-        _sectionA = $("#section-a"),
-        _sectionB = $("#section-b"),
-        _sectionC = $("#section-c");
+        _sectionA = $(".section-a"),
+        _sectionB = $(".section-b"),
+        _sectionC = $(".section-c");
 
     owl.owlCarousel({
         loop: false,
@@ -46,16 +48,52 @@ $(document).ready(function () {
     }
 
     window.onscroll = function () {
-        if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+        let curScrollPos = window.pageYOffset,
+            sectionBTop = _sectionB.offset().top,
+            sectionCTop = _sectionC.offset().top;
+
+        if (curScrollPos > 40) {
             topBtn.css('display', 'block')
         } else {
             topBtn.css('display', 'none')
         }
+
+        if (curScrollPos > (sectionBTop - 300) &&
+            (curScrollPos < (sectionBTop - 10))) {
+            if (_sectionB.is(".off")) {
+                return false
+            }
+            $('html, body').animate({
+                scrollTop: (_sectionB.offset().top)
+            }, 500);
+            _sectionB.removeClass("on").addClass("off");
+        }
+
+        if (curScrollPos > (sectionCTop - 300) &&
+            (curScrollPos < (sectionCTop - 10))) {
+            if (_sectionC.is(".off")) {
+                return false
+            }
+            $('html, body').animate({
+                scrollTop: (_sectionC.offset().top)
+            }, 500);
+            _sectionC.removeClass("on").addClass("off");
+        }
+
+        if (curScrollPos < (sectionCTop - 300)) {
+            _sectionC.removeClass("off").addClass("on");
+        }
+
+        if (curScrollPos < (sectionBTop - 300)) {
+            _sectionB.removeClass("off").addClass("on");
+            _sectionC.removeClass("off").addClass("on");
+        }
     };
 
     function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        $('html, body').animate({
+            scrollTop: ($('#content').offset().top)
+        }, 500);
     }
 
     /*=========================================================================
@@ -67,7 +105,6 @@ $(document).ready(function () {
     };
 
     _nav.btn.prototype.btnATapped = function () {
-        console.log("btn-a Tapped!");
         $('html, body').animate({
             scrollTop: (_sectionB.offset().top)
         }, 500);
@@ -75,7 +112,7 @@ $(document).ready(function () {
     _nav.btn.prototype.btnBTapped = function () {
         $('#overlay').fadeIn(300);
     };
-    _nav.btn.prototype.popupCloseTapped = function() {
+    _nav.btn.prototype.popupCloseTapped = function () {
         $('#overlay').fadeOut(300);
     };
     _nav.btn.prototype.dropASelected = function () {

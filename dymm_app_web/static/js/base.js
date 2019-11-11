@@ -113,77 +113,14 @@ $(document).ready(function () {
             } else {
                 alert(_message.error.network);
             }
-        },
-        _coloringTableOfARow = function (targetEle, before, after) {
-            targetEle.prevAll(".selected").removeClass("selected").css(
-                "background-color", before);
-            targetEle.nextAll(".selected").removeClass("selected").css(
-                "background-color", before);
-            if (targetEle.not(".selected")) {
-                targetEle.addClass("selected");
-                targetEle.css("background-color", after);
-            }
-        },
-        _foldSubRowsRecursively = function (targetEle) {
-            $.each(targetEle, function (i, subEle) {
-                subEle = $(subEle);
-                if (subEle.is(".off")) {
-                    return;
-                }
-                let subElsSuperId = subEle.data("id"),
-                    subSubEle = subEle.nextAll(".super" + subElsSuperId);
-                _foldSubRowsRecursively(subSubEle);
-                subEle.find("div.tr-flip").text("Spread");
-                subEle.removeClass("on").addClass("off");
-            });
-            targetEle.hide();
-        },
-        _loadSubRows = function (tappedEle, url, subElesColor, superId) {
-            $.get(url)
-                .done(function (response, textStatus, jqXHR) {
-                    let subEles = $(response).addClass("super" + superId);
-                    subEles.addClass("sub");
-                    subEles.css("background-color", subElesColor);
-                    tappedEle.after(subEles);
-                    console.log("LoadAfter Complete.");
-                })
-                .fail(function (response) {
-                    _alertFailResponse(response);
-                });
-            tappedEle.addClass("tapped");
-        },
-        _toggleTableOfRows = function (tappedEle, url, subElesColor) {
-            subElesColor = subElesColor || "beige";
-            tappedEle.css("background-color", "paleturquoise");
-            if (tappedEle.data("hasSub") !== "True") {
-                console.log("Current Element has any sub-entities.");
-                return false;
-            }
-            let _superId = tappedEle.data("id");
-            if (tappedEle.is(".off")) {
-                if (tappedEle.is(".tapped")) {
-                    tappedEle.nextAll(".super" + _superId).show();
-                } else {
-                    _loadSubRows(tappedEle, url, subElesColor, _superId)
-                }
-                tappedEle.find("div.tr-flip").text("Fold");
-                tappedEle.removeClass("off").addClass("on");
-            } else if (tappedEle.is(".on")) {
-                let _subEls = tappedEle.nextAll(".super" + _superId);
-                _foldSubRowsRecursively(_subEls);
-                tappedEle.find("div.tr-flip").text("Spread");
-                tappedEle.removeClass("on").addClass("off");
-            }
-        };
+        }
     $.base = {
         url: _url,
         message: _message,
         code: _code,
         method: {
             alertFailResponse: _alertFailResponse,
-            htmlFailResponse: _htmlFailResponse,
-            coloringTableOfARow: _coloringTableOfARow,
-            toggleTableOfRows: _toggleTableOfRows
+            htmlFailResponse: _htmlFailResponse
         }
     };
 });
