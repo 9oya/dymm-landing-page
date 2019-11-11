@@ -58,7 +58,7 @@ $(document).ready(function () {
             topBtn.css('display', 'none')
         }
 
-        if (curScrollPos > (sectionBTop - 300) &&
+        if (curScrollPos > (sectionBTop - 400) &&
             (curScrollPos < (sectionBTop - 10))) {
             if (_sectionB.is(".off")) {
                 return false
@@ -69,7 +69,7 @@ $(document).ready(function () {
             _sectionB.removeClass("on").addClass("off");
         }
 
-        if (curScrollPos > (sectionCTop - 300) &&
+        if (curScrollPos > (sectionCTop - 400) &&
             (curScrollPos < (sectionCTop - 10))) {
             if (_sectionC.is(".off")) {
                 return false
@@ -80,11 +80,11 @@ $(document).ready(function () {
             _sectionC.removeClass("on").addClass("off");
         }
 
-        if (curScrollPos < (sectionCTop - 300)) {
+        if (curScrollPos < (sectionCTop - 400)) {
             _sectionC.removeClass("off").addClass("on");
         }
 
-        if (curScrollPos < (sectionBTop - 300)) {
+        if (curScrollPos < (sectionBTop - 400)) {
             _sectionB.removeClass("off").addClass("on");
             _sectionC.removeClass("off").addClass("on");
         }
