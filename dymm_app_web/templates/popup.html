@@ -6,18 +6,8 @@
             Contact Us
         </div>
         <br/><br/>
-        <form>
-            <label>
-                <input name="name" type="text" class="feedback-input" placeholder="Name"/>
-            </label>
-            <label>
-                <input name="email" type="text" class="feedback-input" placeholder="Email"/>
-            </label>
-            <label>
-                <textarea name="text" class="feedback-input" placeholder="Message"></textarea>
-            </label>
-            <input type="submit" value="Submit"/>
-        </form>
+        <div class="message"></div>
+        {% include 'form_contact.html' %}
         <br/>
     </div>
 </div>

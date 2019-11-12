@@ -1,0 +1,7 @@
+{% from "form_helpers.html" import render_field %}
+<form method="post" action="/contact">
+    {{ render_field(form.name) }}
+    {{ render_field(form.email) }}
+    {{ render_field(form.message) }}
+    {{ form.submit }}
+</form>

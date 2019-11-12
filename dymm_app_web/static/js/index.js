@@ -135,6 +135,22 @@ $(document).ready(function () {
         });
         location.reload();
     };
+    _nav.btn.prototype.submitContact = function (currEle) {
+        let _form = currEle.parent();
+        _form.attr("action", "/contact");
+        _form.ajaxSubmit(function () {
+            // location.reload();
+            // return false;
+        });
+        // $.post("/contact", _form)
+        //     .done(function (response, textStatus, jqXHR) {
+        //         alert(response.message);
+        //     })
+        //     .fail(function (response) {
+        //         _f.htmlFailResponse(response,
+        //             currEle.find(".message"));
+        //     });
+    };
 
     /*=========================================================================
     Event delegation map
@@ -144,7 +160,7 @@ $(document).ready(function () {
     });
     _navBar.on(
         "click",
-        "#nav-btn-a, #nav-btn-b, #drop-a, #drop-b, #popup-close",
+        "#nav-btn-a, #nav-btn-b, #drop-a, #drop-b, #popup-close, #submit",
         function (e) {
             let _currEle = $(this);
             if (_currEle.is("#nav-btn-a")) {
@@ -157,6 +173,8 @@ $(document).ready(function () {
                 _nav.btn.prototype.dropBSelected()
             } else if (_currEle.is("#popup-close")) {
                 _nav.btn.prototype.popupCloseTapped()
+            } else if (_currEle.is("#submit")) {
+                // _nav.btn.prototype.submitContact(_currEle)
             }
         });
 

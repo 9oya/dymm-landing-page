@@ -438,7 +438,7 @@ p#txt-footer {
     color: sandybrown;
 }
 
-.feedback-input {
+.contact-input {
     color: dimgray;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 500;
@@ -455,7 +455,7 @@ p#txt-footer {
     outline: 0;
 }
 
-.feedback-input:focus {
+.contact-input:focus {
     border: 2px solid mediumaquamarine;
 }
 

@@ -113,7 +113,7 @@ $(document).ready(function () {
             } else {
                 alert(_message.error.network);
             }
-        }
+        };
     $.base = {
         url: _url,
         message: _message,
