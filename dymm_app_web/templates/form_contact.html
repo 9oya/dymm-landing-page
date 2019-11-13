@@ -1,5 +1,5 @@
 {% from "form_helpers.html" import render_field %}
-<form method="post" action="/contact">
+<form onsubmit="return false">
     {{ render_field(form.name) }}
     {{ render_field(form.email) }}
     {{ render_field(form.message) }}

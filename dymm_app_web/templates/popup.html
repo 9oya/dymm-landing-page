@@ -1,13 +1,13 @@
 <div id="overlay">
-    <div id="popup">
+    <div class="on" id="popup" >
         <div id="popup-close">X</div>
         <br/>
         <div id="popup-title">
             Contact Us
         </div>
         <br/><br/>
-        <div class="message"></div>
         {% include 'form_contact.html' %}
         <br/>
     </div>
+    <img class="popup-loading" src="{{ url_for('static', filename='img/loading@2x.png') }}" style="display: none;">
 </div>

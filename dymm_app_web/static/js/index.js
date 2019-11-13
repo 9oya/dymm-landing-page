@@ -96,6 +96,11 @@ $(document).ready(function () {
         }, 500);
     }
 
+    function isEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    }
+
     /*=========================================================================
     Private methods for Tag Application
     =========================================================================*/
@@ -110,6 +115,11 @@ $(document).ready(function () {
         }, 500);
     };
     _nav.btn.prototype.btnBTapped = function () {
+        let _popup = $("#popup");
+        if (_popup.is(".off")) {
+            _popup.show();
+            _popup.removeClass("off").addClass("on");
+        }
         $('#overlay').fadeIn(300);
     };
     _nav.btn.prototype.popupCloseTapped = function () {
@@ -136,20 +146,40 @@ $(document).ready(function () {
         location.reload();
     };
     _nav.btn.prototype.submitContact = function (currEle) {
-        let _form = currEle.parent();
-        _form.attr("action", "/contact");
-        _form.ajaxSubmit(function () {
-            // location.reload();
-            // return false;
-        });
-        // $.post("/contact", _form)
-        //     .done(function (response, textStatus, jqXHR) {
-        //         alert(response.message);
-        //     })
-        //     .fail(function (response) {
-        //         _f.htmlFailResponse(response,
-        //             currEle.find(".message"));
-        //     });
+        let _form = currEle.parent(),
+            _formData = _form.serialize(),
+            _loadingImg = $("img.popup-loading"),
+            _popup = $("#popup"),
+            _inputName = _form.find("#name"),
+            _inputEmail = _form.find("#email"),
+            _inputMsg = _form.find("#message");
+
+        if (_inputName.val().length <= 0) {
+            return false
+        } else if (_inputEmail.val().length <= 0 ||
+            !isEmail(_inputEmail.val())) {
+            return false
+        } else if (_inputMsg.val().length <= 0) {
+            return false
+        }
+
+        _loadingImg.show();
+        if (_popup.is(".on")) {
+            _popup.hide();
+            _popup.removeClass("on").addClass("off");
+        }
+        $.post("/contact", _formData)
+            .done(function (response, textStatus, jqXHR) {
+                alert(response.message);
+                _nav.btn.prototype.popupCloseTapped();
+                _loadingImg.hide();
+                _inputName.val('');
+                _inputEmail.val('');
+                _inputMsg.val('');
+            })
+            .fail(function (response) {
+                _f.alertFailResponse(response);
+            });
     };
 
     /*=========================================================================
@@ -174,7 +204,7 @@ $(document).ready(function () {
             } else if (_currEle.is("#popup-close")) {
                 _nav.btn.prototype.popupCloseTapped()
             } else if (_currEle.is("#submit")) {
-                // _nav.btn.prototype.submitContact(_currEle)
+                _nav.btn.prototype.submitContact(_currEle)
             }
         });
 

@@ -12,5 +12,5 @@ def send_mail(name, email, content):
     message.add_recipient('eido9oya@dymm.io')
     message.html = render_template('contact_mail.html',
                                    name=name, email=email, message=content)
-    message.subject = "Contact from {0}".format(name)
+    message.subject = "Contact"
     mail.send(message)

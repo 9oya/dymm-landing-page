@@ -405,6 +405,15 @@ p#txt-footer {
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.6);
+
+}
+
+img.popup-loading {
+    display: block;
+    width: 130px;
+    height: 130px;
+    margin: 40% auto 0 auto;
+    -webkit-animation: rotation 3s infinite linear;
 }
 
 #popup {
@@ -465,17 +474,17 @@ textarea {
     resize: vertical;
 }
 
-[type="submit"] {
+#submit {
+    font-size: 20px;
     width: 250px;
     height: 60px;
+    margin: 0 auto;
+    padding: 14px 0 10px 0;
     background: mediumseagreen;
     border-radius: 20px;
     border: 0;
     cursor: pointer;
     color: white;
-    font-size: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     transition: all 0.3s;
     margin-top: -4px;
     -webkit-appearance: none;
@@ -483,7 +492,7 @@ textarea {
     appearance: none;
 }
 
-[type="submit"]:hover {
+#submit:hover {
     background: mediumaquamarine;
 }
 
