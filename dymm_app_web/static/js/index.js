@@ -12,7 +12,8 @@ $(document).ready(function () {
         _navBar = $(".nav-bar"),
         _sectionA = $(".section-a"),
         _sectionB = $(".section-b"),
-        _sectionC = $(".section-c");
+        _sectionC = $(".section-c"),
+        _sectionD = $(".section-d");
 
     owl.owlCarousel({
         loop: false,
@@ -50,7 +51,8 @@ $(document).ready(function () {
     window.onscroll = function () {
         let curScrollPos = window.pageYOffset,
             sectionBTop = _sectionB.offset().top,
-            sectionCTop = _sectionC.offset().top;
+            sectionCTop = _sectionC.offset().top,
+            sectionDTop = _sectionD.offset().top;
 
         if (curScrollPos > 40) {
             topBtn.css('display', 'block')
@@ -80,13 +82,29 @@ $(document).ready(function () {
             _sectionC.removeClass("on").addClass("off");
         }
 
-        if (curScrollPos < (sectionCTop - 400)) {
-            _sectionC.removeClass("off").addClass("on");
+        if (curScrollPos > (sectionDTop - 400) &&
+            (curScrollPos < (sectionDTop - 10))) {
+            if (_sectionD.is(".off")) {
+                return false
+            }
+            $('html, body').animate({
+                scrollTop: (_sectionD.offset().top)
+            }, 500);
+            _sectionD.removeClass("on").addClass("off");
+        }
+
+        if (curScrollPos < (sectionDTop - 400)) {
+            _sectionD.removeClass("off").addClass("on");
         }
 
         if (curScrollPos < (sectionBTop - 400)) {
             _sectionB.removeClass("off").addClass("on");
             _sectionC.removeClass("off").addClass("on");
+        }
+
+        if (curScrollPos < (sectionCTop - 400)) {
+            _sectionC.removeClass("off").addClass("on");
+            _sectionD.removeClass("off").addClass("on");
         }
     };
 

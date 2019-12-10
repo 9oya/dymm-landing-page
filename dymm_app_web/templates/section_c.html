@@ -1,24 +1,78 @@
-<div class="title-c" data-aos="fade-in" data-aos-duration="1000">
-    Preview
-</div><br/>
-<div class="subtitle-c" data-aos="fade-in" data-aos-duration="1400">
-    사용자의 경험을 고려한 감각적 디자인과 심플한 유저 인터페이스.
+<div class="c-obj-3d-1">
+    <img
+            src="{{ url_for('static', filename='img/obj-3d-blue.png') }}"
+            width="27px"
+            height="32px">
 </div>
-<br/><br/><br/><br/>
-<div class="owl-carousel owl-theme" data-aos="fade-up" data-aos-duration="1700">
-{#    <div class="item-video" data-merge="3"><a class="owl-video" href="https://youtu.be/h6Sh3Yv4Wf4"></a></div>#}
-    <div class="item">
-        <a class="owl-video" href="https://youtu.be/h6Sh3Yv4Wf4"></a>
-    </div>
-    <div class="item">
-        <img src="{{ url_for('static', filename='img/preview-2@2x.png') }}"
-             width="290px"
-             height="580px">
-    </div>
-    <div class="item"><h4>3</h4></div>
-    <div class="item"><h4>4</h4></div>
-    <div class="item"><h4>5</h4></div>
+<div class="c-obj-3d-2">
+    <img
+            src="{{ url_for('static', filename='img/obj-3d-blue.png') }}"
+            width="27px"
+            height="32px">
+</div>
+<div class="c-obj-3d-3">
+    <img
+            src="{{ url_for('static', filename='img/obj-3d-blue.png') }}"
+            width="55px"
+            height="64px">
+</div>
+<div class="c-obj-3d-4">
+    <img
+            src="{{ url_for('static', filename='img/obj-3d-blue.png') }}"
+            width="55px"
+            height="64px">
+</div>
+<div class="c-obj-3d-5">
+    <img
+            src="{{ url_for('static', filename='img/obj-3d-blue.png') }}"
+            width="200px"
+            height="231px">
+</div>
+<div class="c-obj-3d-6">
+    <img
+            src="{{ url_for('static', filename='img/obj-3d-blue.png') }}"
+            width="311px"
+            height="360px">
 </div>
 
-<br/><br/><br/><br/><br/><br/>
-<br/><br/><br/>
+<br><br><br><br><br><br><br><br>
+<ul class="flex-container">
+    <li class="flex-item"></li>
+    <li class="flex-item">
+        <br/><br/>
+        <div class="title-c-l">
+            Unique and Comprehensible
+        </div>
+        <br/>
+{#        <div class="title-c-m">#}
+{#            lifestyle hacking#}
+{#        </div>#}
+        <br/>
+        <div class="subtitle-c">
+            넘처나는 영양제 제품 정보에 무엇이 나에게 좋은 지 혼란스러운 가요? <br>
+            영양제와 기분점수를 기록하여 나에게 맞는 최상의 영양제 조합을 찾아내세요.
+        </div>
+        <br/><br/>
+        <div class="wrap-bt">
+            {% if lang_code == 'ko-KR' %}
+                <img class="img-appstore"
+                     src="{{ url_for('static', filename='img/app-store-white-ko@2x.png') }}"
+                     width="192px"
+                     height="80px">
+            {% else %}
+                <img class="img-appstore"
+                     src="{{ url_for('static', filename='img/app-store-white-en@2x.png') }}"
+                     width="183px"
+                     height="80px">
+            {% endif %}
+        </div>
+        <br/><br/>
+    </li>
+    <li class="flex-item">
+        <img class="img-screen" src="{{ url_for('static', filename='img/mobile-screen1@2x.png') }}"
+             width="290px"
+             height="580px">
+    </li>
+    <li class="flex-item"></li>
+</ul>
+<br/><br/><br/><br/><br/><br/><br/>

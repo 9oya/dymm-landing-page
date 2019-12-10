@@ -1,6 +1,25 @@
-<div class="element1"></div>
-<div class="element2"></div>
+<div class="a-obj-3d-1">
+    <img src="{{ url_for('static', filename='img/obj-3d-green.png') }}"
+         width="101px"
+         height="118px">
+</div>
+<div class="a-obj-3d-2">
+    <img src="{{ url_for('static', filename='img/obj-3d-green.png') }}"
+         width="27px"
+         height="32px">
+</div>
+<div class="a-obj-3d-3">
+    <img src="{{ url_for('static', filename='img/obj-3d-green.png') }}"
+         width="55px"
+         height="64px">
+</div>
+<div class="a-obj-3d-4">
+    <img src="{{ url_for('static', filename='img/obj-3d-green.png') }}"
+         width="311px"
+         height="360px">
+</div>
 <ul class="flex-container">
+    <li class="flex-item"></li>
     <li class="flex-item">
         <br/><br/>
         <div class="title-a-l">
@@ -15,26 +34,29 @@
             {{ txt.sect_a_subtitle | safe }}
         </div>
         <br/><br/>
-        <div class="wrap-bt">
-            {% if lang_code == 'ko-KR' %}
+        {% if lang_code == 'ko-KR' %}
+            <div class="appstore-ko">
                 <img class="img-appstore"
-                     src="{{ url_for('static', filename='img/app-store-white-ko@2x.png') }}"
-                     width="170px"
-                     height="52px">
-            {% else %}
+                     src="{{ url_for('static', filename='img/appstore-btn-ko.png') }}"
+                     width="182px"
+                     height="56px">
+            </div>
+        {% else %}
+            <div class="appstore-en">
                 <img class="img-appstore"
-                     src="{{ url_for('static', filename='img/app-store-white-en@2x.png') }}"
-                     width="155px"
-                     height="52px">
-            {% endif %}
-        </div>
+                     src="{{ url_for('static', filename='img/appstore-btn-en.png') }}"
+                     width="173px"
+                     height="56px">
+            </div>
+        {% endif %}
         <br/><br/>
     </li>
     <li class="flex-item">
-        <img class="img-screen" src="{{ url_for('static', filename='img/img-screen2@2x.png') }}"
+        <img class="img-screen" src="{{ url_for('static', filename='img/screen1.png') }}"
              width="290px"
              height="580px">
     </li>
+    <li class="flex-item"></li>
     <li class="flex-item"></li>
 </ul>
 <br/><br/><br/><br/><br/><br/><br/>
