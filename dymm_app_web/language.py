@@ -1,11 +1,11 @@
 class EngPack:
-    sect_a_title_l = "Hack yourself : )"
+    sect_a_title_l = "Hack yourself :)"
     sect_a_title_m = "The Ultimate Tracking App."
     sect_a_subtitle = """
-    You can track your vital data:<br/>
-    <b>Food, Activity, Drug, Disease and Mood score!</b><br/>
-    Optimize your lifestyle with the help of AI:<br/>
-    <b>Recommendation system, Lifespan calculation!</b>
+    Dymm is a tracker that help you tack your vital Data<br/>
+    <b>Food, Activity, Drug, Disease and Mood score.</b><br/>
+    Optimize your lifestyle with the help of AI<br/>
+    <b>Recommendations and Lifespan calculation.</b>
     """
 
 

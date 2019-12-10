@@ -26,11 +26,11 @@
             {{ txt.sect_a_title_l }}
         </div>
         <br/>
-        <div class="title-a-m">
-            {{ txt.sect_a_title_m }}
-        </div>
+{#        <div class="title-a-m">#}
+{#            {{ txt.sect_a_title_m }}#}
+{#        </div>#}
         <br/>
-        <div class="subtitle-a">
+        <div class="title-a-m">
             {{ txt.sect_a_subtitle | safe }}
         </div>
         <br/><br/>
@@ -52,11 +52,15 @@
         <br/><br/>
     </li>
     <li class="flex-item">
-        <img class="img-screen" src="{{ url_for('static', filename='img/screen1.png') }}"
+        <img class="img-screen" src="{{ url_for('static', filename='img/a-screen1.png') }}"
              width="290px"
              height="580px">
     </li>
-    <li class="flex-item"></li>
+    <li class="flex-item">
+        <img class="img-screen" src="{{ url_for('static', filename='img/a-screen2.png') }}"
+             width="290px"
+             height="580px">
+    </li>
     <li class="flex-item"></li>
 </ul>
 <br/><br/><br/><br/><br/><br/><br/>

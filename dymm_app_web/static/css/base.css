@@ -122,8 +122,8 @@ div#content {
 }
 
 .title-a-m {
-    font-size: 350%;
-    font-family: "HelveticaNeue-bold", "Helvetica Neue Bold", "Helvetica Neue",
+    font-size: 150%;
+    font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
     animation-delay: 3s;
 }
@@ -145,7 +145,7 @@ div#content {
 
 .subtitle-a {
     text-align: left;
-    font-size: 110%;
+    font-size: 150%;
     font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
     opacity: 0;
@@ -197,8 +197,8 @@ div#content {
 .a-obj-3d-2 {
     opacity: 0;
     position: absolute;
-    left: 30%;
-    top: 15%;
+    left: 33%;
+    top: 14%;
     animation: rotate 10s linear infinite, fadeIn 1s linear forwards;
     animation-delay: 7s;
 }
@@ -206,7 +206,7 @@ div#content {
 .a-obj-3d-3 {
     opacity: 0;
     position: absolute;
-    right: 45%;
+    right: 50%;
     top: 16%;
     animation: rotate 15s linear infinite, fadeIn 1s linear forwards;
     animation-delay: 7s;
@@ -228,9 +228,25 @@ div#content {
     text-align: center;
 }
 
+.title-b-l {
+    color: #61DCFF;
+    text-align: left;
+    font-size: 300%;
+    font-family: "HelveticaNeue-bold", "Helvetica Neue Bold", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.title-b-m {
+    color: #61DCFF;
+    text-align: left;
+    font-size: 150%;
+    font-family: "HelveticaNeue-bold", "Helvetica Neue Bold", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
 #title-b {
     color: #61DCFF;
-    font-size: 30pt;
+    font-size: 40pt;
     font-family: "HelveticaNeue-medium", "Helvetica Neue Medium", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
     opacity: 0;
@@ -239,114 +255,67 @@ div#content {
 }
 
 #subtitle-b {
-    color: rgba(60, 179, 113, 0.65);
-    font-size: 12pt;
+    color: #61DCFF;
+    font-size: 30pt;
 }
 
-#flex-container-b {
+.flex-container-b {
+    position: relative;
+    z-index: 1;
     display: flex;
-    justify-content: center;
-    padding: 0 20px 0 20px;
+    /*flex-direction: column-reverse;*/
     -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    list-style-type: none;
+
+    transform: rotate(180deg);
 }
 
-#flex-container-b > div {
-    width: 170px;
-    height: 200px;
-    color: #61DCFF;
-    margin: 0 20px 100px 20px;
-    padding: 30px 30px 30px 30px;
-    /*box-shadow: 0 3px 10px 3px #eeeeee;*/
-    font-size: 13px;
-    transition: transform .5s
-}
-
-div.box-2 {
-    /*box-shadow: 0 3px 30px 0 #eeeeee;*/
-}
-
-#flex-container-b > div:hover {
-    /*transform: scale(1.09);*/
-    box-shadow: 0 3px 30px 0 #eeeeee;
-}
-
-.circle {
-    margin: -70px auto 20px;
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    background-color: white;
-    box-shadow: 0 3px 20px 0 #eeeeee;
-}
-
-.circle-img {
-    margin-top: 20%;
-    margin-left: 3.5%;
-}
-
-.circle-img-a {
-    margin-top: 25%;
-    margin-left: 4.5%;
-}
-
-.circle-a {
-    background-color: #921BEA;
-}
-
-.circle-b {
-    background-color: #921BEA;
-}
-
-.circle-c {
-    background-color: #921BEA;
-}
-
-.box-1-title {
-    font-size: 14px;
-    color: #61DCFF;
+.flex-container-b li {
+    transform: rotate(-180deg);
 }
 
 .b-obj-3d-1 {
     opacity: 0;
     position: absolute;
     left: 20%;
-    top: 25%;
+    top: 24%;
     animation: rotate 30s linear infinite, fadeIn 1s linear forwards;
     animation-delay: 7s;
 }
 
 .b-obj-3d-2 {
     position: absolute;
-    left: 30%;
-    top: 30%;
+    left: 34%;
+    top: 28%;
     animation: rotate 7s linear infinite, fadeIn 1s linear forwards;
 }
 
 .b-obj-3d-3 {
     position: absolute;
-    top: 32%;
-    right: 5%;
+    top: 26%;
+    right: 20%;
     animation: rotate 40s linear infinite, fadeIn 1s linear forwards;
 }
 
 .b-obj-3d-4 {
     position: absolute;
-    right: 20%;
-    top: 43%;
+    right: 30%;
+    top: 40%;
     animation: rotate 7s linear infinite, fadeIn 1s linear forwards;
 }
 
 .b-obj-3d-5 {
     position: absolute;
-    right: 5%;
-    top: 45%;
+    right: 20%;
+    top: 42%;
     animation: rotate 15s linear infinite, fadeIn 1s linear forwards;
 }
 
 .b-obj-3d-6 {
     position: absolute;
-    left: 5%;
-    top: 43%;
+    right: 1%;
+    top: 42%;
     animation: rotate 15s linear infinite, fadeIn 1s linear forwards;
 }
 
@@ -355,7 +324,7 @@ div.box-2 {
 .section-c {
     padding: 20px;
     text-align: left;
-    color: #77B8F8;
+    color: #C3E1FF
 }
 
 .flex-container {
@@ -368,13 +337,13 @@ div.box-2 {
 }
 
 .title-c-l {
-    font-size: 400%;
+    font-size: 300%;
     font-family: "HelveticaNeue-bold", "Helvetica Neue Bold", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 .title-c-m {
-    font-size: 350%;
+    font-size: 150%;
     font-family: "HelveticaNeue-bold", "Helvetica Neue Bold", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
 }
@@ -402,7 +371,7 @@ div.box-2 {
 
 .c-obj-3d-2 {
     position: absolute;
-    left: 48%;
+    left: 42%;
     top: 60%;
     animation: rotate 7s linear infinite, fadeIn 1s linear forwards;
 }
@@ -416,7 +385,7 @@ div.box-2 {
 
 .c-obj-3d-4 {
     position: absolute;
-    left: 35%;
+    left: 33%;
     top: 63%;
     animation: rotate 7s linear infinite, fadeIn 1s linear forwards;
 }
@@ -430,7 +399,7 @@ div.box-2 {
 
 .c-obj-3d-6 {
     position: absolute;
-    top: 68%;
+    top: 65%;
     left: -50px;
     animation: rotate 40s linear infinite, fadeIn 1s linear forwards;
 }
@@ -456,8 +425,8 @@ div.box-2 {
 }
 
 .item {
-    width: 290px;
-    height: 500px;
+    width: 256px;
+    height: 554px;
     background-color: #AF7DEF;
     transition: transform .5s
 }
@@ -469,7 +438,7 @@ div.box-2 {
 .d-obj-3d-1 {
     position: absolute;
     right: 30%;
-    top: 76%;
+    top: 74%;
     animation: rotate 10s linear infinite, fadeIn 1s linear forwards;
 }
 /* Footer

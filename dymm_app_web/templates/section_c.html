@@ -41,35 +41,27 @@
     <li class="flex-item">
         <br/><br/>
         <div class="title-c-l">
-            Unique and Comprehensible
+            Activities &<br/>
+            Diseases
         </div>
         <br/>
-{#        <div class="title-c-m">#}
-{#            lifestyle hacking#}
+        <div class="title-c-m">
+            Make your daily lifestyle factors.
+        </div>
+        <br/>
+{#        <div class="subtitle-c">#}
+{#            넘처나는 영양제 제품 정보에 무엇이 나에게 좋은 지 혼란스러운 가요? <br>#}
+{#            영양제와 기분점수를 기록하여 나에게 맞는 최상의 영양제 조합을 찾아내세요.#}
 {#        </div>#}
-        <br/>
-        <div class="subtitle-c">
-            넘처나는 영양제 제품 정보에 무엇이 나에게 좋은 지 혼란스러운 가요? <br>
-            영양제와 기분점수를 기록하여 나에게 맞는 최상의 영양제 조합을 찾아내세요.
-        </div>
-        <br/><br/>
-        <div class="wrap-bt">
-            {% if lang_code == 'ko-KR' %}
-                <img class="img-appstore"
-                     src="{{ url_for('static', filename='img/app-store-white-ko@2x.png') }}"
-                     width="192px"
-                     height="80px">
-            {% else %}
-                <img class="img-appstore"
-                     src="{{ url_for('static', filename='img/app-store-white-en@2x.png') }}"
-                     width="183px"
-                     height="80px">
-            {% endif %}
-        </div>
         <br/><br/>
     </li>
     <li class="flex-item">
-        <img class="img-screen" src="{{ url_for('static', filename='img/mobile-screen1@2x.png') }}"
+        <img src="{{ url_for('static', filename='img/c-screen1.png') }}"
+             width="290px"
+             height="580px">
+    </li>
+    <li class="flex-item">
+        <img src="{{ url_for('static', filename='img/c-screen2.png') }}"
              width="290px"
              height="580px">
     </li>
