@@ -60,61 +60,61 @@ $(document).ready(function () {
             topBtn.css('display', 'none')
         }
 
-        if (curScrollPos > (sectionBTop - 400) &&
-            (curScrollPos < (sectionBTop - 10))) {
-            if (_sectionB.is(".off")) {
-                return false
-            }
-            $('html, body').animate({
-                scrollTop: (_sectionB.offset().top)
-            }, 500);
-            _sectionB.removeClass("on").addClass("off");
-        }
-
-        if (curScrollPos > (sectionCTop - 400) &&
-            (curScrollPos < (sectionCTop - 10))) {
-            if (_sectionC.is(".off")) {
-                return false
-            }
-            $('html, body').animate({
-                scrollTop: (_sectionC.offset().top)
-            }, 500);
-            _sectionC.removeClass("on").addClass("off");
-        }
-
-        if (curScrollPos > (sectionDTop - 400) &&
-            (curScrollPos < (sectionDTop - 10))) {
-            if (_sectionD.is(".off")) {
-                return false
-            }
-            $('html, body').animate({
-                scrollTop: (_sectionD.offset().top)
-            }, 500);
-            _sectionD.removeClass("on").addClass("off");
-        }
-
-        if (curScrollPos < (sectionDTop - 400)) {
-            if (_navBar.is(".preview")) {
-                return
-            }
-            _sectionD.removeClass("off").addClass("on");
-        }
-
-        if (curScrollPos < (sectionBTop - 400)) {
-            if (_navBar.is(".preview")) {
-                return
-            }
-            _sectionB.removeClass("off").addClass("on");
-            _sectionC.removeClass("off").addClass("on");
-        }
-
-        if (curScrollPos < (sectionCTop - 400)) {
-            if (_navBar.is(".preview")) {
-                return
-            }
-            _sectionC.removeClass("off").addClass("on");
-            _sectionD.removeClass("off").addClass("on");
-        }
+        // if (curScrollPos > (sectionBTop - 400) &&
+        //     (curScrollPos < (sectionBTop - 10))) {
+        //     if (_sectionB.is(".off")) {
+        //         return false
+        //     }
+        //     $('html, body').animate({
+        //         scrollTop: (_sectionB.offset().top)
+        //     }, 500);
+        //     _sectionB.removeClass("on").addClass("off");
+        // }
+        //
+        // if (curScrollPos > (sectionCTop - 400) &&
+        //     (curScrollPos < (sectionCTop - 10))) {
+        //     if (_sectionC.is(".off")) {
+        //         return false
+        //     }
+        //     $('html, body').animate({
+        //         scrollTop: (_sectionC.offset().top)
+        //     }, 500);
+        //     _sectionC.removeClass("on").addClass("off");
+        // }
+        //
+        // if (curScrollPos > (sectionDTop - 400) &&
+        //     (curScrollPos < (sectionDTop - 10))) {
+        //     if (_sectionD.is(".off")) {
+        //         return false
+        //     }
+        //     $('html, body').animate({
+        //         scrollTop: (_sectionD.offset().top)
+        //     }, 500);
+        //     _sectionD.removeClass("on").addClass("off");
+        // }
+        //
+        // if (curScrollPos < (sectionDTop - 400)) {
+        //     if (_navBar.is(".preview")) {
+        //         return
+        //     }
+        //     _sectionD.removeClass("off").addClass("on");
+        // }
+        //
+        // if (curScrollPos < (sectionBTop - 400)) {
+        //     if (_navBar.is(".preview")) {
+        //         return
+        //     }
+        //     _sectionB.removeClass("off").addClass("on");
+        //     _sectionC.removeClass("off").addClass("on");
+        // }
+        //
+        // if (curScrollPos < (sectionCTop - 400)) {
+        //     if (_navBar.is(".preview")) {
+        //         return
+        //     }
+        //     _sectionC.removeClass("off").addClass("on");
+        //     _sectionD.removeClass("off").addClass("on");
+        // }
     };
 
     function topFunction() {

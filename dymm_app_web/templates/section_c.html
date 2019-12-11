@@ -1,70 +1,67 @@
 <div class="c-obj-3d-1">
     <img
-            src="{{ url_for('static', filename='img/obj-3d-blue.png') }}"
+            src="{{ url_for('static', filename='img/obj-3d-purple.png') }}"
             width="27px"
             height="32px">
 </div>
 <div class="c-obj-3d-2">
     <img
-            src="{{ url_for('static', filename='img/obj-3d-blue.png') }}"
+            src="{{ url_for('static', filename='img/obj-3d-purple.png') }}"
             width="27px"
             height="32px">
 </div>
 <div class="c-obj-3d-3">
     <img
-            src="{{ url_for('static', filename='img/obj-3d-blue.png') }}"
+            src="{{ url_for('static', filename='img/obj-3d-purple.png') }}"
             width="55px"
             height="64px">
 </div>
 <div class="c-obj-3d-4">
     <img
-            src="{{ url_for('static', filename='img/obj-3d-blue.png') }}"
+            src="{{ url_for('static', filename='img/obj-3d-purple.png') }}"
             width="55px"
             height="64px">
 </div>
 <div class="c-obj-3d-5">
     <img
-            src="{{ url_for('static', filename='img/obj-3d-blue.png') }}"
+            src="{{ url_for('static', filename='img/obj-3d-purple.png') }}"
             width="200px"
             height="231px">
 </div>
 <div class="c-obj-3d-6">
     <img
-            src="{{ url_for('static', filename='img/obj-3d-blue.png') }}"
+            src="{{ url_for('static', filename='img/obj-3d-purple.png') }}"
             width="311px"
             height="360px">
 </div>
 
-<br><br><br><br><br><br><br><br>
+<br><br><br><br>
 <ul class="flex-container">
+    <li class="flex-item"></li>
+    <li class="flex-item"></li>
     <li class="flex-item"></li>
     <li class="flex-item">
         <br/><br/>
-        <div class="title-c-l">
-            Activities &<br/>
-            Diseases
+        <div class="c-title" data-aos="fade-in" data-aos-duration="1800">
+            {{ txt.c_title | safe }}
         </div>
         <br/>
-        <div class="title-c-m">
-            Track anything you want with vast<br/>and easy access data.
+        <div class="c-subtitle" data-aos="fade-in" data-aos-duration="1800">
+            {{ txt.c_subtitle | safe }}
         </div>
         <br/>
-{#        <div class="subtitle-c">#}
-{#            넘처나는 영양제 제품 정보에 무엇이 나에게 좋은 지 혼란스러운 가요? <br>#}
-{#            영양제와 기분점수를 기록하여 나에게 맞는 최상의 영양제 조합을 찾아내세요.#}
-{#        </div>#}
         <br/><br/>
     </li>
     <li class="flex-item">
         <img src="{{ url_for('static', filename='img/c-screen1.png') }}"
-             width="290px"
-             height="580px">
+             width="426px"
+             height="471px"
+             data-aos="fade-in" data-aos-duration="1800"
+        >
     </li>
-    <li class="flex-item">
-        <img src="{{ url_for('static', filename='img/c-screen2.png') }}"
-             width="290px"
-             height="580px">
-    </li>
+    <li class="flex-item"></li>
+    <li class="flex-item"></li>
+    <li class="flex-item"></li>
     <li class="flex-item"></li>
 </ul>
 <br/><br/><br/><br/><br/><br/><br/>

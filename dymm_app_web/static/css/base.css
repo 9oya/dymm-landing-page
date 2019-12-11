@@ -108,27 +108,27 @@ div#content {
     list-style-type: none;
 }
 
-.title-a-l, .title-a-m {
+.a-title, .a-subtitle {
     transform-origin: left;
     transform: scaleX(0);
     animation: revealTextReverse 1s ease-in-out forwards;
 }
 
-.title-a-l {
-    font-size: 400%;
+.a-title {
+    font-size: 300%;
     font-family: "HelveticaNeue-bold", "Helvetica Neue Bold", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
     animation-delay: 2s;
 }
 
-.title-a-m {
+.a-subtitle {
     font-size: 150%;
     font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
     animation-delay: 3s;
 }
 
-.title-a-l:before, .title-a-m:before {
+.a-title:before, .a-subtitle:before {
     content: '';
     position: absolute;
     background: #3ED6A7;
@@ -139,18 +139,8 @@ div#content {
     animation-delay: 3s;
 }
 
-.title-a-m:before {
+.a-subtitle:before {
     animation-delay: 4s;
-}
-
-.subtitle-a {
-    text-align: left;
-    font-size: 150%;
-    font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
-    opacity: 0;
-    animation: fadeIn 1s linear forwards;
-    animation-delay: 5s;
 }
 
 .appstore-ko {
@@ -192,7 +182,7 @@ div#content {
     left: -10px;
     top: 8%;
     animation: rotate 30s linear infinite, fadeIn 1s linear forwards;
-    animation-delay: 7s;
+    animation-delay: 6s;
 }
 
 .a-obj-3d-2 {
@@ -201,7 +191,7 @@ div#content {
     left: 33%;
     top: 14%;
     animation: rotate 10s linear infinite, fadeIn 1s linear forwards;
-    animation-delay: 7s;
+    animation-delay: 6s;
 }
 
 .a-obj-3d-3 {
@@ -210,7 +200,7 @@ div#content {
     right: 50%;
     top: 16%;
     animation: rotate 15s linear infinite, fadeIn 1s linear forwards;
-    animation-delay: 7s;
+    animation-delay: 6s;
 }
 
 .a-obj-3d-4 {
@@ -219,7 +209,7 @@ div#content {
     top: 18%;
     right: -50px;
     animation: rotate 40s linear infinite, fadeIn 1s linear forwards;
-    animation-delay: 7s;
+    animation-delay: 6s;
 }
 
 /* Section B
@@ -229,7 +219,7 @@ div#content {
     text-align: center;
 }
 
-.title-b-l {
+.b-title {
     color: #61DCFF;
     text-align: left;
     font-size: 300%;
@@ -237,7 +227,7 @@ div#content {
     Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-.title-b-m {
+.b-subtitle {
     color: #61DCFF;
     text-align: left;
     font-size: 150%;
@@ -280,42 +270,42 @@ div#content {
     opacity: 0;
     position: absolute;
     left: 16%;
-    top: 24%;
+    top: 21%;
     animation: rotate 20s linear infinite, fadeIn 1s linear forwards;
-    animation-delay: 7s;
+    animation-delay: 6s;
 }
 
 .b-obj-3d-2 {
     position: absolute;
     left: 33%;
-    top: 30%;
+    top: 27%;
     animation: rotate 15s linear infinite, fadeIn 1s linear forwards;
 }
 
 .b-obj-3d-4 {
     position: absolute;
     right: 40%;
-    top: 37%;
+    top: 34%;
     animation: rotate 7s linear infinite, fadeIn 1s linear forwards;
 }
 
 .b-obj-3d-5 {
     position: absolute;
     right: 27%;
-    top: 41%;
+    top: 38%;
     animation: rotate 15s linear infinite, fadeIn 1s linear forwards;
 }
 
 .b-obj-3d-6 {
     position: absolute;
     right: 1%;
-    top: 42%;
+    top: 39%;
     animation: rotate 35s linear infinite, fadeIn 1s linear forwards;
 }
 
 .b-obj-3d-3 {
     position: absolute;
-    top: 40%;
+    top: 37%;
     left: 30%;
     animation: rotate 20s linear infinite, fadeIn 1s linear forwards;
 }
@@ -323,7 +313,7 @@ div#content {
 .b-obj-3d-7 {
     position: absolute;
     left: 7%;
-    top: 42%;
+    top: 39%;
     animation: rotate 30s linear infinite, fadeIn 1s linear forwards;
 }
 
@@ -344,13 +334,13 @@ div#content {
     list-style-type: none;
 }
 
-.title-c-l {
+.c-title {
     font-size: 300%;
     font-family: "HelveticaNeue-bold", "Helvetica Neue Bold", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-.title-c-m {
+.c-subtitle {
     font-size: 150%;
     font-family: "HelveticaNeue-bold", "Helvetica Neue Bold", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -379,14 +369,14 @@ div#content {
 
 .c-obj-3d-2 {
     position: absolute;
-    left: 42%;
+    right: 35%;
     top: 60%;
     animation: rotate 7s linear infinite, fadeIn 1s linear forwards;
 }
 
 .c-obj-3d-3 {
     position: absolute;
-    right: 38%;
+    right: 25%;
     top: 61%;
     animation: rotate 10s linear infinite, fadeIn 1s linear forwards;
 }
@@ -394,20 +384,20 @@ div#content {
 .c-obj-3d-4 {
     position: absolute;
     left: 33%;
-    top: 63%;
+    top: 60%;
     animation: rotate 15s linear infinite, fadeIn 1s linear forwards;
 }
 
 .c-obj-3d-5 {
     position: absolute;
     right: -10px;
-    top: 66%;
+    top: 61%;
     animation: rotate 30s linear infinite, fadeIn 1s linear forwards;
 }
 
 .c-obj-3d-6 {
     position: absolute;
-    top: 65%;
+    top: 60%;
     left: -50px;
     animation: rotate 40s linear infinite, fadeIn 1s linear forwards;
 }
@@ -420,14 +410,14 @@ div#content {
     text-align: center;
 }
 
-.title-d {
+.d-title {
     color: #AF7DEF;
     font-family: "HelveticaNeue-medium", "Helvetica Neue Medium", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 30pt;
 }
 
-.subtitle-d {
+.d-subtitle {
     font-size: 12pt;
     color: #AF7DEF;
 }

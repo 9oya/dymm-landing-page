@@ -1,37 +1,34 @@
 <div class="a-obj-3d-1">
-    <img src="{{ url_for('static', filename='img/obj-3d-green.png') }}"
+    <img src="{{ url_for('static', filename='img/obj-3d-purple.png') }}"
          width="101px"
          height="118px">
 </div>
 <div class="a-obj-3d-2">
-    <img src="{{ url_for('static', filename='img/obj-3d-green.png') }}"
+    <img src="{{ url_for('static', filename='img/obj-3d-purple.png') }}"
          width="27px"
          height="32px">
 </div>
 <div class="a-obj-3d-3">
-    <img src="{{ url_for('static', filename='img/obj-3d-green.png') }}"
+    <img src="{{ url_for('static', filename='img/obj-3d-purple.png') }}"
          width="55px"
          height="64px">
 </div>
 <div class="a-obj-3d-4">
-    <img src="{{ url_for('static', filename='img/obj-3d-green.png') }}"
+    <img src="{{ url_for('static', filename='img/obj-3d-purple.png') }}"
          width="311px"
          height="360px">
 </div>
 <ul class="flex-container">
     <li class="flex-item"></li>
+    <li class="flex-item"></li>
     <li class="flex-item">
         <br/><br/>
-        <div class="title-a-l">
-            {{ txt.sect_a_title_l }}
+        <div class="a-title">
+            {{ txt.a_title | safe }}
         </div>
-        <br/>
-{#        <div class="title-a-m">#}
-{#            {{ txt.sect_a_title_m }}#}
-{#        </div>#}
-        <br/>
-        <div class="title-a-m">
-            {{ txt.sect_a_subtitle | safe }}
+        <br/><br/>
+        <div class="a-subtitle">
+            {{ txt.a_subtitle | safe }}
         </div>
         <br/><br/>
         {% if lang_code == 'ko-KR' %}
@@ -52,15 +49,13 @@
         <br/><br/>
     </li>
     <li class="flex-item">
+        <br/><br/><br/>
         <img class="img-screen" src="{{ url_for('static', filename='img/a-screen1.png') }}"
-             width="290px"
-             height="580px">
-    </li>
-    <li class="flex-item">
-        <img class="img-screen" src="{{ url_for('static', filename='img/a-screen2.png') }}"
-             width="290px"
-             height="580px">
+             width="412px"
+             height="318px">
     </li>
     <li class="flex-item"></li>
+    <li class="flex-item"></li>
+    <li class="flex-item"></li>
 </ul>
-<br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br><br><br><br><br><br><br><br><br><br><br><br>
