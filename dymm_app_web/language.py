@@ -1,8 +1,8 @@
 class EngPack:
-    sect_a_title_l = "Hack yourself :)"
+    sect_a_title_l = "Make your life better."
     sect_a_title_m = "The Ultimate Tracking App."
     sect_a_subtitle = """
-    Dymm is a tracker that help you tack your vital Data<br/>
+    Dymm is a tracker that helps you tack your vital data<br/>
     <b>Food, Activity, Drug, Disease and Mood score.</b><br/>
     Optimize your lifestyle with the help of AI<br/>
     <b>Recommendations and Lifespan calculation.</b>

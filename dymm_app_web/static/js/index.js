@@ -94,15 +94,24 @@ $(document).ready(function () {
         }
 
         if (curScrollPos < (sectionDTop - 400)) {
+            if (_navBar.is(".preview")) {
+                return
+            }
             _sectionD.removeClass("off").addClass("on");
         }
 
         if (curScrollPos < (sectionBTop - 400)) {
+            if (_navBar.is(".preview")) {
+                return
+            }
             _sectionB.removeClass("off").addClass("on");
             _sectionC.removeClass("off").addClass("on");
         }
 
         if (curScrollPos < (sectionCTop - 400)) {
+            if (_navBar.is(".preview")) {
+                return
+            }
             _sectionC.removeClass("off").addClass("on");
             _sectionD.removeClass("off").addClass("on");
         }
@@ -128,9 +137,15 @@ $(document).ready(function () {
     };
 
     _nav.btn.prototype.btnATapped = function () {
+        _navBar.addClass("preview");
+        _sectionB.removeClass("on").addClass("off");
+        _sectionC.removeClass("on").addClass("off");
+        _sectionD.removeClass("on").addClass("off");
         $('html, body').animate({
-            scrollTop: (_sectionB.offset().top)
-        }, 500);
+            scrollTop: (_sectionD.offset().top)
+        }, 500, function () {
+            _navBar.removeClass("preview");
+        });
     };
     _nav.btn.prototype.btnBTapped = function () {
         let _popup = $("#popup");
