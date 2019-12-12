@@ -3,7 +3,7 @@ class EngPack:
     contact = "CONTACT"
     a_title = "Make your life better"
     a_subtitle = """
-    Dymm helps you track your daily lifestyle<br/>
+    Dymm helps you track your daily data<br/>
     <b>Food, Activity, Drug, Disease and Mood score.</b><br/>
     Optimize your lifestyle with the help of AI<br/>
     <b>Recommendations and Lifespan calculation.</b>
