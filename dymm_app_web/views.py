@@ -33,11 +33,6 @@ def index_view():
                            lang_code=lang_code, form=form)
 
 
-@app_view.route('/test')
-def test_view():
-    return render_template('test/test.html')
-
-
 @app_view.route('/contact', methods=['POST'])
 def send_contact_mail():
     form = ContactENGForm(request.form)
@@ -45,3 +40,16 @@ def send_contact_mail():
         return bad_req(form.errors)
     send_mail(form.name.data, form.email.data, form.message.data)
     return ok()
+
+
+@app_view.route('/privacy/<string:lang>')
+def privacy_view(lang=None):
+    if lang == 'en':
+        return render_template('privacy_en.html')
+    elif lang == 'ko':
+        return render_template('privacy_ko.html')
+
+
+@app_view.route('/test')
+def test_view():
+    return render_template('test/test.html')
