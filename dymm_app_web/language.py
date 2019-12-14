@@ -2,27 +2,26 @@ class EngPack:
     head_title = "Dymm - Habit Tracker"
     preview = "PREVIEW"
     contact = "CONTACT"
-    a_title = "Make your life better"
+    a_title = "Track anything you want"
     a_subtitle = """
     Dymm helps you track your daily data<br/>
-    <b>Food, Activity, Drug, Disease and Mood score.</b><br/>
+    <b>Food, Activity, Drug, Disease and Mood Score.</b><br/>
     Optimize your lifestyle with the help of AI<br/>
-    <b>Recommendations and Lifespan calculation.</b>
+    <b>Recommendation and Lifespan calculation.</b>
     """
     b_title = "Foods &<br/>Pills"
     b_subtitle = "Picking the serving size is<br/>simple and sophisticated."
     c_title = "Activities &<br/>Diseases"
     c_subtitle = """
-    Track anything you want</br>
-    with easy access</br>
-    to the vast data.
+    Large amounts of data<br/>
+    that are easily accessible.
     """
     d_title = "Preview"
     d_subtitle = "The UI is designed for a better user experience."
 
 
 class KorPack:
-    head_title = "딤 - 생활습관 추적"
+    head_title = "딤 - 생활습관 개선"
     preview = "미리보기"
     contact = "연락하기"
     a_title = "더 나은 생활을 만듭니다"
