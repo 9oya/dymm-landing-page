@@ -50,6 +50,14 @@ def privacy_view(lang=None):
         return render_template('privacy_ko.html')
 
 
+@app_view.route('/terms/<string:lang>')
+def terms_view(lang=None):
+    if lang == 'en':
+        return render_template('terms_en.html')
+    elif lang == 'ko':
+        return render_template('terms_ko.html')
+
+
 @app_view.route('/test')
 def test_view():
     return render_template('test/test.html')

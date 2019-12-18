@@ -1,5 +1,5 @@
 class EngPack:
-    head_title = "Dymm - Habit Tracker"
+    head_title = "Dymm | Habit Tracker"
     preview = "PREVIEW"
     contact = "CONTACT"
     a_title = "Track anything you want"
@@ -21,7 +21,7 @@ class EngPack:
 
 
 class KorPack:
-    head_title = "딤 - 생활습관 개선"
+    head_title = "딤 | 생활습관 개선"
     preview = "미리보기"
     contact = "연락하기"
     a_title = "더 나은 생활을 만듭니다"
