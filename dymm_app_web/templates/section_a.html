@@ -23,6 +23,15 @@
     <li class="flex-item"></li>
     <li class="flex-item">
         <br/><br/>
+        {% if option == "welcome" %}
+            <div class="a-message">
+                Your email address has been successfully verified!
+            </div>
+        {% elif option == "confirmed" %}
+            <div class="a-message">
+                Your email address has already been verified. Enjoy Dymm :)
+            </div>
+        {% endif %}
         <div class="a-title">
             {{ txt.a_title | safe }}
         </div>
@@ -33,17 +42,21 @@
         <br/><br/>
         {% if lang_code == 'ko-KR' %}
             <div class="appstore-ko">
-                <img class="img-appstore"
-                     src="{{ url_for('static', filename='img/appstore-btn-ko.png') }}"
-                     width="182px"
-                     height="56px">
+                <a href="https://apps.apple.com/us/app/dymm-habit-tracker/id1483878468?ls=1">
+                    <img class="img-appstore"
+                         src="{{ url_for('static', filename='img/appstore-btn-ko.png') }}"
+                         width="182px"
+                         height="56px">
+                </a>
             </div>
         {% else %}
             <div class="appstore-en">
-                <img class="img-appstore"
-                     src="{{ url_for('static', filename='img/appstore-btn-en.png') }}"
-                     width="173px"
-                     height="56px">
+                <a href="https://apps.apple.com/us/app/dymm-habit-tracker/id1483878468?ls=1">
+                    <img class="img-appstore"
+                         src="{{ url_for('static', filename='img/appstore-btn-en.png') }}"
+                         width="173px"
+                         height="56px">
+                </a>
             </div>
         {% endif %}
         <br/><br/>

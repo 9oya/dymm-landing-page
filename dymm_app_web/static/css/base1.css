@@ -108,6 +108,13 @@ div#content {
     list-style-type: none;
 }
 
+.a-message {
+    font-size: 150%;
+    font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: #C3E1FF;
+}
+
 .a-title, .a-subtitle {
     transform-origin: left;
     transform: scaleX(0);

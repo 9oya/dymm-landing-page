@@ -9,7 +9,8 @@ app_view = Blueprint('app_view', __name__, url_prefix='')
 
 
 @app_view.route('/')
-def index_view():
+@app_view.route('/<string:option>')
+def index_view(option=None):
     lang_code = request.cookies.get('dymm_client_lang')
     if lang_code is None:
         try:
@@ -30,7 +31,7 @@ def index_view():
     form.email.render_kw = {'class': 'contact-input'}
     form.message.render_kw = {'class': 'contact-input'}
     return render_template('index.html', txt=lang_pack, lang_txt=lang_txt,
-                           lang_code=lang_code, form=form)
+                           lang_code=lang_code, form=form, option=option)
 
 
 @app_view.route('/contact', methods=['POST'])
